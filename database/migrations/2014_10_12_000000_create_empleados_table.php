@@ -22,6 +22,7 @@ class CreateEmpleadosTable extends Migration
             $table->string('domicilio');
             $table->string('skill');
             $table->string('calificacion');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

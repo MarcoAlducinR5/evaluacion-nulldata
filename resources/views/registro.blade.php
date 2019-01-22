@@ -5,7 +5,8 @@
 
 <label for="">Ingrese los datos a realizar...</label>
 <div class="row mt-6">
-    <form action="{{ url( "/registro/resultado") }}" method="get">
+    <form action="{{ url( "/registro/resultado") }}" method="POST">
+        {{csrf_field()}}
         <div class="col-sm-6">
             <label for="">Nombre:</label>
             <p><input type="text" name="nombreEmp" id="nombreEmp"></p>
@@ -81,7 +82,7 @@
                 </select>
             </p>
         </div>
-        <p><input type="submit" value="Registrar"></p>
+        <p><button type="submit">Registrar Empleado</button></p>
     </form>
     <!--<a href="{{ url()->previous() }}">Regresar</a>-->
     <a href="{{ action('EvaluacionController@index') }}">Regresar</a>

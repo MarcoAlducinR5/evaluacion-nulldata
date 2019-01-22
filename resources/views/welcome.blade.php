@@ -1,5 +1,5 @@
 @include('header')
-    <h1>Listado de Empleados</h1>
+    <h1>Evaluacion: Empleados</h1>
 
     <hr>
 

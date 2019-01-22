@@ -23,6 +23,7 @@ class EmpleadosSeeder extends Seeder
             'domicilio' => 'Algun lugar',
             'skill' => 'autocontrol',
             'calificacion' => '1',
+            'remember_token' => '',
             'created_at' => '2019-01-21 21:08:50',
             'updated_at' => '2019-01-21 21:08:50'
         ]);
@@ -35,6 +36,7 @@ class EmpleadosSeeder extends Seeder
             'domicilio' => 'Ningun lugar',
             'skill' => 'responsabilidad',
             'calificacion' => '4',
+            'remember_token' => '',
             'created_at' => '2019-01-21 21:43:50',
             'updated_at' => '2019-01-21 21:43:50'
         ]);
@@ -47,6 +49,7 @@ class EmpleadosSeeder extends Seeder
             'domicilio' => 'A la orilla del mar',
             'skill' => 'Puntual',
             'calificacion' => '4',
+            'remember_token' => '',
             'created_at' => '2019-01-21 21:49:50',
             'updated_at' => '2019-01-21 21:49:50'
         ]);
@@ -59,6 +62,7 @@ class EmpleadosSeeder extends Seeder
             'domicilio' => 'En el cerro',
             'skill' => 'Bondadoso',
             'calificacion' => '2',
+            'remember_token' => '',
             'created_at' => '2019-01-21 21:56:50',
             'updated_at' => '2019-01-21 21:56:50'
         ]);

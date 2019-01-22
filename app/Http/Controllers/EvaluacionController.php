@@ -26,6 +26,21 @@ class EvaluacionController extends Controller
     }
 
     public function resultado(){
+        $data = request()->all();
+        $skills = "".$data['skills1'].",".$data['skills2'].",".$data['skills3'].",".$data['skills4'].",".$data['skills5'].",".$data['skills6']."";
+        $calificaciones = "".$data['calificarSkill1'].",".$data['calificarSkill2'].",".$data['calificarSkill3'].",".$data['calificarSkill4'].",".$data['calificarSkill5'].",".$data['calificarSkill6']."";
+
+        DB::table('empleados')->insert([
+            'name' => $data['nombreEmp'],
+            'email' => $data['emailEmp'],
+            'puesto' => $data['puestoEmp'],
+            'fechaNac' => $data['fechaNacEmp'],
+            'domicilio' => $data['domicilioEmp'],
+            'skill' => $skills,
+            'calificacion' => $calificaciones,
+            'remember_token' => $data['_token'],
+            'created_at' => date('Y-m-d H:m:s'),
+        ]);
         return view('resultado');
     }
 

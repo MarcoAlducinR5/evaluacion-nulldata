@@ -23,4 +23,4 @@ Route::get('/listado', 'EvaluacionController@listado');
 
 Route::get('/detalles/{id}', 'EvaluacionController@detalles')->where(['id' => '[0-9]+']);
 
-Route::get('/registro/resultado', 'EvaluacionController@resultado');
+Route::post('/registro/resultado', 'EvaluacionController@resultado');

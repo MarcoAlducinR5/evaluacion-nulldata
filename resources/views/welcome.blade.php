@@ -8,7 +8,7 @@
             <label for="">Seleccione la opcion a realizar...</label>
             <ul>
                 <li> <a href="{{ url( "/registro") }}">Registro</a></li>
-                <li>Lista</li>
+                <li> <a href="{{ url( "/listado") }}">Lista</a></li>
             </ul>
         </div>
         <div class="col-4">

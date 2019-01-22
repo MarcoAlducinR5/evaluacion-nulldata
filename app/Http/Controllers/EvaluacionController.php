@@ -12,4 +12,16 @@ class EvaluacionController extends Controller
         return view('registro');
     }
 
+    public function listado(){
+        return view('listado');
+    }
+
+    public function detalles($id){
+        return view('detalles-empleado', compact('id') );
+    }
+
+    public function resultado(){
+        return view('resultado');
+    }
+
 }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 class EvaluacionController extends Controller
 {
@@ -13,11 +14,15 @@ class EvaluacionController extends Controller
     }
 
     public function listado(){
-        return view('listado');
+        $empleados = DB::table('empleados')->select('id','name')->get();
+        return view('listado', compact('empleados'));
     }
 
     public function detalles($id){
-        return view('detalles-empleado', compact('id') );
+        //$empleado = DB::table('empleados')->select('id','name')->where('id','$id')->take(1)->get();
+        $empleado = \App\Models\Empleado::find($id);
+
+        return view('detalles-empleado', compact('id', 'empleado') );
     }
 
     public function resultado(){

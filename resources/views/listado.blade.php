@@ -12,61 +12,17 @@
             </tr>
         </thead>
         <tbody>
+        @forelse( $empleados as $empleado)
             <tr>
-                <td></td>
-                <td></td>
-                <td><a href="{{ url( "/detalles/1") }}"> Ver</a> </td>
+                <td>{{ $empleado->id }}</td>
+                <td>{{ $empleado->name }}</td>
+                <td><a href="{{ url( "/detalles/{$empleado->id}") }}"> Ver</a> </td>
             </tr>
+        @empty
             <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/2") }}"> Ver </a> </td>
+                <td colspan="3">No hay empleados registrados.</td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/3") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/4") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/5") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/6") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/7") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/8") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/9") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/10") }}"> Ver </a> </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td> <a href="{{ url( "/detalles/11") }}"> Ver </a> </td>
-            </tr>
+        @endforelse
         </tbody>
     </table>
 
